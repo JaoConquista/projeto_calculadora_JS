@@ -1,0 +1,26 @@
+@mixin centralizando
+    display: flex
+    justify-content: center
+    align-content: center
+
+%e-hover
+    background: #ccc
+    color: #ff5100
+
+%animacao-de-fundo
+    @keyframes color-animation
+        0%
+            background-position: 0% 50%
+        50%
+            background-position: 100% 50%   
+        100%
+            background-position: 0% 50%
+            
+
+@mixin animacao
+    @extend %animacao-de-fundo
+    background-size: 300% 300%
+    animation: color-animation 6s ease infinite
+    
+
+    

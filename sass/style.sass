@@ -1,0 +1,51 @@
+@use 'mixin'
+
+
+.background
+    @include mixin.centralizando
+    @include mixin.animacao
+    background-image: linear-gradient(90deg,#454fe2,#000,#fff)
+    height: 100vh
+    padding: 3rem
+    
+.calculadora
+    text-align: center
+
+    #resultado
+        font-size: 30px
+        display: flex
+        justify-content: end
+        padding: 10px
+        height: 1em
+        border: 2px solid #fff
+        color: #000
+        background: #ffffff
+        border-radius: 20px
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif 
+
+    table
+        @include mixin.centralizando
+        border: 2px solid #fff
+        border-radius: 20px
+        background: #000000
+        margin-top: -20px
+
+        button
+            color: #fff
+            background: #000
+            border-radius: 20%
+            font-size: 30px
+            margin: 5px
+            width: 50px
+        
+        #zero,#igual
+            border-radius: 10%
+
+        #zero
+            width: 106px
+        
+        #igual
+            height: 106px
+
+        button:hover
+            @extend %e-hover
